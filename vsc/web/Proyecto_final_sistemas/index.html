@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css\style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            background: linear-gradient(45deg,red,blue,green,black);
+            background-size: 400% 400%;
+            position: relative;
+            animation: cambiar 10s ease-in-out infinite;
+        }
+        .todo{
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 5%;
+            padding: 3rem;
+            background: rgba( 37, 217, 216, 0.05 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 9px );
+            -webkit-backdrop-filter: blur( 9px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+        img{
+            padding:10px;
+            border-radius:10%;
+            -webkit-border-radius:10%;
+            -moz-border-radius:10%;
+            -ms-border-radius:10%;
+            -o-border-radius:10%;
+        }
+        @keyframes cambiar{
+            0%{background-position: 0 50%;}
+            50%{background-position: 100% 50%;}
+            100%{background-position: 0 50%;}
+        }
+        .logo{
+            width:10%;
+            height:10%;
+        }
+        header{
+            background-color: rgb(255, 255, 255);
+        }
+        .titulo{
+            color: black;
+            margin-bottom: 2px;
+        }
+    </style>
+    <title>Sistemas operativos</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">
+            <img class="logo" src="img/ESPEtransparente.png" alt="">
+            Departamento de ciencias de la computacion - Sistemas operativos - Proyecto final
+        </h1>
+    </header>
+    <div class="todo">
+        <h1>SISTEMAS OPERATIVOS</h1>
+        <h2>¿Qué es un sistema operativo?</h2>
+        <p>
+            Un sistema operativo es un conjunto de programas que permite manejar la memoria, disco, medios de almacenamiento de información y los diferentes periféricos o recursos de nuestra computadora, como son el teclado, el mouse, la impresora, la placa de red, entre otros
+        </p>
+        <h2>Sistemas operativos más usados</h2>
+        <ul>
+            <li>Windows: Windows es el nombre de una familia de distribuciones de software para PC, servidores, sistemas empotrados y antiguamente teléfonos inteligentes desarrollados y vendidos por Microsoft y disponibles para múltiples arquitecturas, tales como x86, x86-64 y ARM.</li>
+            <img src="img/Windows_7.jpg" alt=""  width="20%" height="20%">
+            <li>Mac OS: Mac OS es el nombre del sistema operativo creado por Apple para su línea de computadoras Macintosh, también aplicado retroactivamente a las versiones anteriores a System 7.6, y que apareció por primera vez en System 7.5.1.</li>
+            <img src="img/MAC OS.jpg" alt=""  width="20%" height="20%">
+            <li>Linux: GNU/Linux es un sistema operativo tipo Unix compuesto por software libre y de código abierto. GNU/Linux surge de las contribuciones de varios proyectos de software, entre los cuales destacan GNU y el kernel «Linux».</li>
+            <img src="img/linux2.png" alt=""  width="20%" height="20%">
+            <li>Android: Android es un sistema operativo móvil basado en el núcleo Linux y otros software de código abierto. Fue diseñado para dispositivos móviles con pantalla táctil, como teléfonos inteligentes, tabletas, relojes inteligentes Wear OS, automóviles con otros sistemas a través de Android Auto, al igual los automóviles con el sistema Android Automotive y televisores Android TV.</li>
+            <img src="img/android.jpg" alt=""  width="20%" height="20%">
+            </ul>
+    </div>
+</body>
+</html>

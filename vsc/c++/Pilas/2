@@ -1,0 +1,55 @@
+#include "Nodo.h"
+#include <iostream>
+using namespace std;
+class Cola{
+	Nodo *primero;
+	public:
+		Cola();
+		void ingresar(Nodo *);
+		int eliminar();
+		void imprimir();
+};
+
+Cola::Cola(){
+	primero = NULL;
+}
+
+void Cola::ingresar(Nodo *nuevoNodo){
+	
+	if(primero == NULL){
+		primero = nuevoNodo;
+	}else{
+		Nodo *aux;
+		aux = primero;
+		while(aux->getSiguiente()!=NULL){
+			aux = aux->getSiguiente();
+		}
+		aux->setSiguiente(nuevoNodo);
+	}
+}
+
+int Cola::eliminar(){
+	if(primero == NULL){
+		return -1;
+	}else{
+		int datoEliminado;
+		datoEliminado = primero->getNumero();
+		primero = primero->getSiguiente();
+		return datoEliminado;
+	}
+}
+
+void Cola::imprimir(){
+	if(primero == NULL){
+		cout<<"No hay nada en la cola"<<endl;
+	}else{
+		int i = 1;
+		Nodo *aux;
+		aux = primero;		
+		while(aux!=NULL){
+			cout<<i << ": "<<aux->getNumero()<<endl;
+			aux = aux->getSiguiente();
+			i++;			
+		}
+	}
+}

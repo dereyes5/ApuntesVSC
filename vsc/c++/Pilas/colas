@@ -1,0 +1,69 @@
+#include "Nodo.h"
+#include <iostream>
+
+using namespace std;
+class Pila{
+	Nodo *primero;
+	public:
+		Pila();
+		void ingresar(Nodo *);
+		int eliminar();
+		void imprimir();
+		void cambiarACola(Cola *);
+};
+
+Pila::Pila(){
+	primero = NULL;
+}
+
+void Pila::cambiarACola(Cola *cola){
+	if(primero == NULL){
+		return;
+	}else{		
+		Nodo *aux;
+		aux = primero;
+		while(aux != NULL){
+			if(aux->getNumero() %2 == 0){
+				cola->ingresar(new Nodo(aux->getNumero()));
+			}
+			aux = aux->getSiguiente();			
+		}		
+	}
+}
+
+void Pila::ingresar(Nodo *nuevoNodo){
+	
+	if(primero == NULL){
+		primero = nuevoNodo;
+	}else{
+		Nodo *aux;
+		aux = primero;
+		primero = nuevoNodo;
+		primero->setSiguiente(aux);		
+	}
+}
+
+int Pila::eliminar(){
+	if(primero == NULL){
+		return -1;
+	}else{
+		int datoEliminado;
+		datoEliminado = primero->getNumero();
+		primero = primero->getSiguiente();
+		return datoEliminado;
+	}
+}
+
+
+void Pila::imprimir(){
+	if(primero == NULL){
+		cout<<"No hay nada en la pila"<<endl;
+	}else{
+		Nodo *aux;
+		aux = primero;
+		while(aux != NULL){
+			cout<<aux->getNumero()<<endl;
+			aux = aux->getSiguiente();			
+		}
+	}
+}

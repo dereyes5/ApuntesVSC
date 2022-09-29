@@ -1,0 +1,43 @@
+#ifndef NODO_H
+#define NODO_H
+#include <stdlib.h>
+
+class Nodo{
+	private: 
+		int numero;
+		Nodo *siguiente;
+	public:
+		Nodo();
+		Nodo(int);
+		Nodo *getSiguiente();
+		void setSiguiente(Nodo *);
+		int getNumero();
+		void setNumero(int);			
+};
+
+Nodo::Nodo(){
+	siguiente = NULL;
+}
+
+Nodo::Nodo(int numero){
+	siguiente = NULL;
+	this->numero = numero;
+}
+
+int Nodo::getNumero(){
+	return numero;
+}
+
+Nodo *Nodo::getSiguiente(){
+	return siguiente;
+}
+
+void Nodo::setNumero(int numero){
+	this->numero = numero;
+}
+
+void Nodo::setSiguiente(Nodo *siguiente){
+	this->siguiente = siguiente;
+}
+
+#endif

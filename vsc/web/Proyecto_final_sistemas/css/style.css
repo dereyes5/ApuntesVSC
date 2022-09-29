@@ -1,0 +1,46 @@
+body{
+    width: 100%;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(45deg,red,blue,green,black);
+	background-size: 400% 400%;
+	position: relative;
+	animation: cambiar 10s ease-in-out infinite;
+}
+.todo{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 5%;
+    padding: 3rem;
+    background: rgba( 37, 217, 216, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+img{
+    padding:10px;
+    border-radius:10%;
+    -webkit-border-radius:10%;
+    -moz-border-radius:10%;
+    -ms-border-radius:10%;
+    -o-border-radius:10%;
+}
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+.logo{
+    width:10%;
+    height:10%;
+}
+header{
+    background-color: rgb(255, 255, 255);
+}
+.titulo{
+    color: black;
+    margin-bottom: 2px;
+}

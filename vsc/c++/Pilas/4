@@ -1,0 +1,31 @@
+#include <iostream>
+#include <stdlib.h>
+#include<time.h>
+#include "Cola.h"
+#include "Pilas.h"
+
+using namespace std;
+
+int main(){
+	
+	int numero;
+	Pila pila;
+	Cola cola;
+	
+	cout << "Ingrese el numero para insertar en la pila (Mayor 0): ";
+	cin >> numero;
+	while(numero > 0){
+		pila.ingresar(new Nodo(numero));
+		cout << "Ingrese el numero para insertar en la pila (Mayor 0): ";
+		cin >> numero;
+	}
+
+	pila.cambiarACola(&cola);
+	cout << "Pila" << endl;
+	pila.imprimir();
+	cout << "___" << endl << endl;
+	cout << "Cola" << endl;
+	cola.imprimir();
+	
+	return 0;
+}
